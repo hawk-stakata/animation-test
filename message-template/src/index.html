@@ -30,32 +30,5 @@
 {%- endblock %}
 
 {%- block email_content %}
-  {% set contents = [
-    base.comment("!-------------- [ MOD1 ] Stack 1.1 -------------!"),
-      base.module(
-        class="mod-1 stack-1-1",
-        contents=[
-          base.box(
-            class="stack-inner-box", bgcolor="#ffffff",
-            contents=[
-              base.image(img_stack_d, link="${mod1_hero}", alt="", width="100%", height="320", class="desktop"),
-              base.image(img_stack_m, link="${mod1_hero}", alt="", width="100%", height="320", class="mobile"),
-              base.spacer("35"),
-              base.text(mod1_headline, element="h1", class="bold"),
-              base.spacer("8"),
-              base.text(mod1_subhead),
-              base.spacer("18"),
-              base.button(mod1_cta, link="${mod1_cta}", btn_style="solid-blue"),
-              base.spacer("35")
-            ]
-          )
-        ]
-      )
-  ] 
-%}
-  
-  {% for content in contents %}
-    {{ content }}
-  {% endfor %}
 
 {%- endblock email_content %} 
